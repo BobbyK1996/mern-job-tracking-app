@@ -18,6 +18,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeLayout />,
+    errorElement: <Error />,
     children: [
       { index: true, element: <Landing /> },
       { path: 'register', element: <Register /> },
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
   {
     path: 'dashboard',
     element: <DashboardLayout />,
+    errorElement: <Error />,
     children: [
       { index: true, element: <AddJob /> },
       { path: 'admin', element: <Admin /> },
