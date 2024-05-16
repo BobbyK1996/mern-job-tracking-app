@@ -11,7 +11,7 @@ function Landing() {
       </HomeNav>
       <Container>
         <div className="info">
-          <Heading as="h1" weight="700" mbottom="1.5rem">
+          <Heading as="h1" weight="700" mmargin="1.5rem 3rem 2rem 1rem">
             Job <span>Tracking</span> App
           </Heading>
           <p>

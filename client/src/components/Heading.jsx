@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components';
 
-const margins = ['mtop', 'mright', 'mleft', 'mbottom'];
+const margins = ['mmargin', 'mtop', 'mright', 'mleft', 'mbottom'];
 
 const Heading = styled.h1`
-  margin: 0;
+  /* margin: 0; */
   font-weight: 400;
   line-height: 1;
   text-transform: capitalize;
@@ -12,7 +12,9 @@ const Heading = styled.h1`
   ${(props) =>
     margins
       .map((margin) => {
-        return props[margin] && `margin-${margin.slice(1)}: ${props[margin]};`;
+        return margin === 'mmargin'
+          ? props[margin] && `margin: ${props[margin]};`
+          : props[margin] && `margin-${margin.slice(1)}: ${props[margin]};`;
       })
       .join(' ')};
 
