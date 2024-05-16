@@ -1,5 +1,7 @@
 import styled, { css } from 'styled-components';
 
+const margins = ['mtop', 'mright', 'mleft', 'mbottom'];
+
 const Heading = styled.h1`
   margin: 0;
   font-weight: 400;
@@ -7,6 +9,13 @@ const Heading = styled.h1`
   text-transform: capitalize;
   letter-spacing: var(--letter-spacing);
   font-weight: ${(props) => props.weight || 0};
+  ${(props) =>
+    margins
+      .map((margin) => {
+        return props[margin] && `margin-${margin.slice(1)}: ${props[margin]};`;
+      })
+      .join(' ')};
+
   ${(props) => {
     let fontSize;
     switch (props.as) {
