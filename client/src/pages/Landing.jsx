@@ -1,37 +1,7 @@
-import styled from 'styled-components';
-
 import main from '../assets/images/main.svg';
-import media from '../breakpoints';
 
+import Wrapper from '../assets/wrappers/LandingPage';
 import { Button, Logo, Heading, Container, HomeNav } from '../components';
-
-const Wrapper = styled.section`
-  span {
-    color: var(--primary-500);
-  }
-
-  p {
-    line-height: 2;
-    color: var(--text-secondary-color);
-    margin-bottom: 1.5rem;
-    max-width: 35em;
-  }
-
-  .btn-group {
-    display: flex;
-    gap: 1rem;
-  }
-
-  .main-img {
-    display: none;
-  }
-
-  ${media.md`
-      .main-img {
-        display:block;
-      }
-    `}
-`;
 
 function Landing() {
   return (
