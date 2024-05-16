@@ -1,13 +1,9 @@
 import styled from 'styled-components';
 
 import main from '../assets/images/main.svg';
-
-import Button from '../components/Button';
-import Logo from '../components/Logo';
-import Heading from '../components/Heading';
-import Container from '../components/Container';
-import HomeNav from '../components/HomeNav';
 import media from '../breakpoints';
+
+import { Button, Logo, Heading, Container, HomeNav } from '../components';
 
 const Wrapper = styled.section`
   span {
