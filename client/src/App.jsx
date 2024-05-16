@@ -1,5 +1,7 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
+import { StyleSheetManager } from 'styled-components';
+
 import {
   HomeLayout,
   Landing,
@@ -13,6 +15,8 @@ import {
   Profile,
   AllJobs,
 } from './pages';
+
+const shouldForwardProp = (prop) => !['variation'].includes(prop);
 
 const router = createBrowserRouter([
   {
@@ -40,7 +44,11 @@ const router = createBrowserRouter([
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <StyleSheetManager shouldForwardProp={shouldForwardProp}>
+      <RouterProvider router={router} />
+    </StyleSheetManager>
+  );
 }
 
 export default App;
